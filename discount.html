@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Your Discount - ViciousInks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo-removebg.png" type="image/png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+    // Initialize EmailJS
+(function(){
+   emailjs.init("opK-jY1t5LcwvcRmp");  // Replace with your EmailJS public key
+})();
+
+function getRandomMultipleOf5() {
+    // Generate a random integer between 4 and 10 (inclusive)
+    const randomInt = Math.floor(Math.random() * (10 - 4 + 1)) + 4;
+    
+    // Multiply by 5 to get a number in the range of 20 to 50 in multiples of 5
+    const randomMultipleOf5 = randomInt * 5;
+
+    return randomMultipleOf5;
+}
+
+
+
+
+function sendMail(event) {
+    event.preventDefault();  // Prevent default form submission
+
+    // Get form values
+    let params = {
+        name: document.getElementById("fullname").value,
+        email: document.getElementById("email").value,
+        piercing: document.getElementById("piercing").value,
+        preferredDate: document.getElementById("preferredDate").value,  // Capture date value
+        discount: getRandomMultipleOf5()
+    };
+
+    // Ensure all fields are filled before sending email and storing data
+    if (params.name && params.email && params.piercing && params.preferredDate) {
+        // Send the email
+        emailjs.send("service_u29g08p", "template_pp9bovk", params)
+        .then(function(response) {
+            alert("Discount Requested.");
+            console.log("SUCCESS!", response.status, response.text);
+            
+            // Store user details in localStorage
+            localStorage.setItem('fullname', params.name);
+            localStorage.setItem('email', params.email);
+            localStorage.setItem('piercing', params.piercing);
+            localStorage.setItem('preferredDate', params.preferredDate);
+            localStorage.setItem('discount', params.discount);
+            
+            // Redirect to the confirmation page
+            window.location.href = 'confirmation.html';  // Make sure confirmation.html exists
+        })
+        .catch(function(error) {
+            alert("Oops! There was an error. Please try again.");
+            console.log("FAILED...", error);
+        });
+    } else {
+        alert('Please fill in all details');
+    }
+}
+
+
+// Attach the sendMail function to the form submit event
+window.onload = function() {
+    document.getElementById("signup-form").addEventListener("submit", sendMail);
+};
+
+
+</script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo-removebg.png" alt="ViciousInks Logo" class="logo"></a>
+        </div>
+        <h1>ViciousInks Tattoos & Piercings!</h1>
+        <br>
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="navMenu" class="hidden">
+            <ul>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#map">Location</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="discount-form">
+    <h3>Fill in your details to request your discount</h3>
+    <form id="signup-form">  <!-- Add ID to the form for JS function targeting -->
+        <input type="text" id="fullname" placeholder="Your Name" required>  <!-- Add ID to capture value in JS -->
+        <input type="email" id="email" placeholder="Your Email" required>    <!-- Add ID to capture value in JS -->
+        <input type="date" id="preferredDate" placeholder="Preferred Date" required> <!-- Add ID for date -->
+        <select id="piercing" required> <!-- Add ID to capture role (type of piercing) -->
+            <option value="" disabled selected>Choose Piercing</option>
+            <option value="Ear Lobe Piercing">Ear Lobe Piercing</option>
+            <option value="Double Ear Lobe Piercing">Double Ear Lobe Piercing</option>
+            <option value="Nose Piercing">Nose Piercing</option>
+            <option value="Double Nose Piercing">Double Nose Piercing</option>
+            <option value="Snake Eyes Piercing">Snake Eyes Piercing</option>
+            <option value="Frog Eyes Piercing">Frog Eyes Piercing</option>
+            <option value="Eyebrow Piercing">Eyebrow Piercing</option>
+            <option value="Belly Piercing">Belly Piercing</option>
+            <option value="Septum Piercing">Septum Piercing</option>
+            <option value="Smiley Piercing">Smiley Piercing</option>
+            <!-- Add more options as needed -->
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+<a href="index.html" class="button">Return to Homepage</a>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section contact-info">
+                <h4>Contact Us</h4>
+                <p>ViciousInks Tattoos & Piercings</p>
+                <p>Email: <a href="mailto:viciousinksofficial@gmail.com">viciousinksofficial@gmail.com</a></p>
+                <p>Phone: <a href="tel:+27727387762">072 738 7762</a></p>
+                <p>Address: 1850 Jubindaba Street, Ackerville, Witbank</p>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ViciousInks Tattoos & Piercings. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

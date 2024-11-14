@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViciousInks Black November Special</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo-removebg.png" type="image/png">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo-removebg.png" alt="ViciousInks Logo" class="logo"></a>
+        </div>
+        <h1>ViciousInks Tattoos & Piercings!</h1>
+        <br>
+        
+        <nav id="navMenu" class="hidden">
+            <ul>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#map">Location</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="overlay">
+            <h2>Black November Special!</h2>
+            <a href="discount.html" class="cta-button">Request My Discount</a>
+        </div>
+    </section>
+    <h3>Gallery</h3>
+    <section class="gallery" id="gallery">
+        
+        <!-- Gallery images here -->
+        <img src="images/belly.jpg" alt="Belly" >
+        <img src="images/belly2.jpg" alt="Belly" >
+        <img src="images/belly3.jpg" alt="Belly" >
+        <img src="images/belly4.jpg" alt="Belly" >
+        <img src="images/belly5.jpg" alt="Belly" >
+        
+        <img src="images/nose.jpg" alt="Nose" >
+        <img src="images/nose2.jpg" alt="Nose" >
+        <img src="images/nose3.jpg" alt="Nose" >
+        <img src="images/septum.jpg" alt="Septum" >
+        
+        <img src="images/smiley.jpg" alt="Smiley" >
+        <img src="images/smiley2.jpg" alt="Smiley" >
+        
+        <img src="images/snake_eyes.jpg" alt="Snake Eyes" >
+        <img src="images/snake_eyes2.jpg" alt="Snake Eyes" >
+        <img src="images/snake_eyes3.jpg" alt="Snake Eyes" >
+        
+        <img src="images/tounge.jpg" alt="Tounge" >
+        <img src="images/tounge2.jpg" alt="Tounge" >
+        <img src="images/tounge3.jpg" alt="Tounge" >
+        <img src="images/tounge4.jpg" alt="Tounge" >
+        
+        <img src="images/tragus.jpg" alt="Tragus" >
+        <img src="images/tragus_helix.jpg" alt="Tragus_Helix" >
+        
+        
+    </section>
+    <h3>Location</h3>
+    <section class="map" id="map">
+        <div >
+            <!-- Google Maps Iframe -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.7500361919986!2d29.173001826325574!3d-25.86946787464218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eeaeccd4d826065%3A0x5091a3297064bc89!2s1849%20Jubindaba%20St%2C%20KwaThomas%20Mahlanguville%2C%20eMalahleni%2C%201039!5e0!3m2!1sen!2sza!4v1731603023700!5m2!1sen!2sza" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+                        
+            </iframe>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section contact-info">
+                <h4>Contact Us</h4>
+                <p>ViciousInks Tattoos & Piercings</p>
+                <p>Email: <a href="mailto:viciousinksofficial@gmail.com">viciousinksofficial@gmail.com</a></p>
+                <p>Phone: <a href="tel:+27727387762">072 738 7762</a></p>
+                <p>Address: 1850 Jubindaba Street, Ackerville, Witbank</p>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ViciousInks Tattoos & Piercings. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+    <script>
+        // Show the button when the user scrolls down 200px from the top
+window.onscroll = function() { toggleBackToTopButton(); };
+
+function toggleBackToTopButton() {
+    const backToTopButton = document.getElementById("backToTop");
+    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+        backToTopButton.classList.add("show");
+    } else {
+        backToTopButton.classList.remove("show");
+    }
+}
+
+// Smooth scroll to the top when the button is clicked
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+    </script>
+
+</body>
+</html>
