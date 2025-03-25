@@ -3,120 +3,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViciousInks Black November Special</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ViciousInks | Tattoos & Piercings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--<link rel="stylesheet" href="styles.css">-->
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="icon" href="images/logo-removebg.png" type="image/png">
 </head>
-<body>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-80 p-4 flex justify-between items-center z-50">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3">
+            <img src="images/logo-removebg.png" alt="ViciousInks Logo" class="h-20 w-auto">
+            <span class="text-2xl font-bold tracking-wide text-white">ViciousInks</span>
+        </a>
     
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="images/logo-removebg.png" alt="ViciousInks Logo" class="logo"></a>
+        <!-- Mobile Menu Toggle -->
+        <button id="menuToggle" class="md:hidden text-2xl text-white">☰</button>
+    
+        <!-- Navigation Links -->
+        <ul id="navLinks" class="hidden md:flex gap-6 text-white">
+            <li><a href="#gallery" class="hover:text-gray-300 transition">Gallery</a></li>
+            <li><a href="#artists" class="hover:text-gray-300 transition">Artist</a></li>
+            <li><a href="#aftercare" class="hover:text-gray-300 transition">Aftercare</a></li>
+            <li><a href="#booking" class="hover:text-gray-300 transition">Book Now</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <header id="home" class="relative h-screen flex items-center justify-center text-center px-4">
+        <!-- Background Image with Dark Overlay -->
+        <div class="absolute inset-0 w-full h-full bg-black/50"></div>
+        <img src="images/herobg2.jpg" alt="Tattoo & Piercing Studio" 
+            class="absolute inset-0 w-full h-full object-cover opacity-50">
+    
+        <!-- Content -->
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white drop-shadow-lg mb-4">
+                Your Pain, Our Pleasure!!!
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 drop-shadow-md mb-6">
+                Tattoos & Piercings with Passion
+            </p>
+            <a href="#booking" 
+                class="bg-red-600 px-8 py-4 rounded-full text-lg font-semibold text-white 
+                       hover:bg-red-500 transition-all shadow-lg">
+                Book Your Session
+            </a>
         </div>
-        <h1>ViciousInks Tattoos & Piercings!</h1>
-        <br>
-        
-        <nav id="navMenu" class="hidden">
-            <ul>
-                <li><a href="index.html#gallery">Gallery</a></li>
-                <li><a href="index.html#map">Location</a></li>
-            </ul>
-        </nav>
     </header>
-    <section class="hero">
-        <div class="overlay">
-            <h2>Black November Special!</h2>
-            <a href="discount.html" class="cta-button">Request My Discount</a>
+    
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 px-4">
+    <h2 class="text-4xl font-bold text-center mb-12 flex items-center justify-center">
+        <i class="fas fa-images mr-3"></i> <!-- Gallery Icon -->
+        Featured Work
+    </h2>
+    
+    
+    <!-- Collapsible Tabs for Tattoos and Piercings -->
+    <div class="max-w-7xl mx-auto">
+        <!-- Tabs Buttons -->
+        <div class="flex justify-center mb-6 space-x-4">
+            <button id="tattoosTab" class="px-8 py-4 text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
+                Tattoos
+            </button>
+            <button id="piercingsTab" class="px-8 py-4 text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
+                Piercings
+            </button>
+            
+        </div>
+        
+
+        <!-- Tattoo Gallery -->
+            <div id="tattoosSection" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <img src="images/tattoos/mini (3).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/mini (1).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/mini (2).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                
+                <img src="images/tattoos/small (1).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/small (2).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/small (3).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/small (4).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/small (5).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/small (6).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/small (7).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/small (8).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                
+
+                <img src="images/tattoos/medium (16).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/medium (1).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/medium (10).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/medium (11).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/medium (12).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/medium (13).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/medium (14).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/medium (15).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/medium (17).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/medium (18).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+
+                <img src="images/tattoos/large (1).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/large (10).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/large (13).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/large (2).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/large (3).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/large (4).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/large (5).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/large (6).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/large (7).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/large (8).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/large (9).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+
+                <img src="images/tattoos/sleeves (1).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/sleeves (10).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/sleeves (11).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/sleeves (12).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/sleeves (13).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/sleeves (2).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/sleeves (3).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/sleeves (4).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/sleeves (5).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/sleeves (6).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/sleeves (7).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/sleeves (8).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
+            </div>
+        
+        <!-- Piercing Gallery -->
+        <div id="piercingsSection" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 hidden">
+            <img src="images/nose.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/nose2.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/nose3.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/septum.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+
+            <img src="images/smiley.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/smiley2.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+
+            <img src="images/tounge.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/tounge2.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/tounge3.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/tounge4.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+
+            <img src="images/snake_eyes.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/snake_eyes2.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/snake_eyes3.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+
+            <img src="images/belly.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/belly2.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/belly3.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/belly4.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+            <img src="images/belly5.jpg" alt="Piercing" class="w-full object-cover rounded-lg">
+        </div>
+    </div>    
+</section>
+
+
+    <!-- Artists Section -->
+    <section id="artists" class="py-20 px-4 bg-black/50 text-center">
+        <h2 class="text-4xl font-bold text-center mb-6 flex items-center justify-center">
+            <i class="fas fa-paint-brush mr-3"></i> <!-- Paint Brush Icon -->
+            Meet Our Artist
+        </h2>
+        
+        <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+            At <b>ViciousInks</b>, we take pride in the artistry and skill of our lead tattooist and piercer, <b>Freddie</b>. 
+            With years of experience in creating stunning tattoos and precision piercings, Freddie ensures every client gets a unique, 
+            high-quality experience that brings their vision to life.
+        </p>
+    
+        <div class="max-w-lg mx-auto bg-black bg-opacity-70 rounded-xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-300">
+            <img src="images/tattoos/artist.jpg" alt="Freddie - Tattoo & Piercing Artist" 
+                 class="w-48 h-48 object-cover rounded-full mx-auto border-4 border-red-600 transition-transform duration-300 hover:scale-110">
+            
+            <h3 class="text-2xl font-semibold text-white mt-4">Freddie</h3>
+            <p class="text-lg text-gray-400">Tattoo & Piercing Artist</p>
+    
+            <p class="mt-4 text-gray-300 italic">
+                "Ink is more than just art; it's a story, a memory, a part of who you are. Let me help bring your story to life."
+            </p>
         </div>
     </section>
-    <h3>Gallery</h3>
-    <section class="gallery" id="gallery">
+    
+
+    <!-- Booking & Google Maps Section -->
+    <section class="map py-20 px-4 text-center" id="booking">
+        <h2 class="text-4xl font-bold text-center mb-6 flex items-center justify-center">
+            <i class="fas fa-calendar-alt mr-3"></i> <!-- Calendar Alt Icon -->
+            Book Your Appointment
+        </h2>
+        <p class="text-lg text-gray-300 mb-6">
+            Secure your tattoo or piercing appointment with our skilled artists.
+        </p>
         
-        <!-- Gallery images here -->
-        <img src="images/belly.jpg" alt="Belly" >
-        <img src="images/belly2.jpg" alt="Belly" >
-        <img src="images/belly3.jpg" alt="Belly" >
-        <img src="images/belly4.jpg" alt="Belly" >
-        <img src="images/belly5.jpg" alt="Belly" >
-        
-        <img src="images/nose.jpg" alt="Nose" >
-        <img src="images/nose2.jpg" alt="Nose" >
-        <img src="images/nose3.jpg" alt="Nose" >
-        <img src="images/septum.jpg" alt="Septum" >
-        
-        <img src="images/smiley.jpg" alt="Smiley" >
-        <img src="images/smiley2.jpg" alt="Smiley" >
-        
-        <img src="images/snake_eyes.jpg" alt="Snake Eyes" >
-        <img src="images/snake_eyes2.jpg" alt="Snake Eyes" >
-        <img src="images/snake_eyes3.jpg" alt="Snake Eyes" >
-        
-        <img src="images/tounge.jpg" alt="Tounge" >
-        <img src="images/tounge2.jpg" alt="Tounge" >
-        <img src="images/tounge3.jpg" alt="Tounge" >
-        <img src="images/tounge4.jpg" alt="Tounge" >
-        
-        <img src="images/tragus.jpg" alt="Tragus" >
-        <img src="images/tragus_helix.jpg" alt="Tragus_Helix" >
-        
-        
-    </section>
-    <h3>Location</h3>
-    <section class="map" id="map">
-        <div >
-            <!-- Google Maps Iframe -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.7500361919986!2d29.173001826325574!3d-25.86946787464218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eeaeccd4d826065%3A0x5091a3297064bc89!2s1849%20Jubindaba%20St%2C%20KwaThomas%20Mahlanguville%2C%20eMalahleni%2C%201039!5e0!3m2!1sen!2sza!4v1731603023700!5m2!1sen!2sza" 
-                    width="600" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-                        
+        <div class="max-w-5xl mx-auto p-4 mb-10">
+            <iframe class="w-full h-96 rounded-lg"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.9998466723328!2d29.17062007643336!3d-25.86948245042759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eeaed027f0f87cf%3A0xa14e8e164391a424!2sViciousInks%20Tattoos%26Piercings!5e0!3m2!1sen!2sza!4v1742930007984!5m2!1sen!2sza"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
+        <div class="flex justify-center gap-4">
+        <a href="files/Booking & Payment Policy.pdf" download target="_blank"
+            class="bg-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-600 transition">
+            Download Booking Policy
+        </a>
+        <a href="https://book.settime.io/viciousinks-tattoospiercings" target="_blank"
+            class="bg-red-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-500 transition">
+            Book Now
+        </a>
+    </div>
     </section>
+
+   
+<!-- Aftercare Section -->
+<section id="aftercare" class="py-20 px-4 bg-black/50 text-center">
+    <h2 class="text-4xl font-bold text-center mb-6 flex items-center justify-center">
+        <i class="fas fa-first-aid mr-3"></i> <!-- First Aid Icon -->
+        Tattoo & Piercing Aftercare
+    </h2>
+    <p class="text-lg text-gray-300 mb-6">
+        Proper aftercare is essential for ensuring your tattoo or piercing heals properly. Follow these instructions carefully to maintain the quality of your ink and piercing.
+    </p>
     
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section contact-info">
-                <h4>Contact Us</h4>
-                <p>ViciousInks Tattoos & Piercings</p>
-                <p>Email: <a href="mailto:viciousinksofficial@gmail.com">viciousinksofficial@gmail.com</a></p>
-                <p>Phone: <a href="tel:+27727387762">072 738 7762</a></p>
-                <p>Address: 1850 Jubindaba Street, Ackerville, Witbank</p>
+    <!-- Navigation Buttons -->
+    <div class="mb-6">
+        <button onclick="showSection('tattoo-aftercare')" class="mb-5 py-4 text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
+            Tattoo Aftercare
+        </button>
+        <button onclick="showSection('body-piercing-aftercare')" class="mb-5 px-8 py-4 text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
+            Body Piercing Aftercare
+        </button>
+        <button onclick="showSection('mouth-piercing-aftercare')" class="mb-5 px-8 py-4 text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
+            Mouth Piercing Aftercare
+        </button>
+    </div>
+
+    <!-- Aftercare Tips -->
+    <div class="max-w-5xl mx-auto">
+        <!-- Tattoo Aftercare (Initially Visible) -->
+        <div id="tattoo-aftercare" class="bg-black bg-opacity-70 p-8 rounded-xl shadow-2xl aftercare-section">
+            <h3 class="text-2xl font-semibold text-white mb-4">Tattoo Aftercare</h3>
+            <ul class="text-gray-300 space-y-4">
+                <li><strong>1. Remove bandages</strong> after 6 hours of getting your tattoo.</li>
+                <li><strong>2. Gently wash</strong> the tattoo with mild, unscented soap and lukewarm water.</li>
+                <li><strong>3. Apply a small amount of Bepanthen cream</strong> or tattoo aftercare ointment to keep the skin moisturized and promote healing.</li>
+                <li><strong>4. Do not submerge the tattoo</strong> in water (e.g., no swimming or baths) until it’s fully healed.</li>
+                <li><strong>5. Avoid direct sunlight</strong> on the tattoo until it’s completely healed to prevent fading.</li>
+                <li><strong>6. Do not pick or scratch</strong> at the tattoo as it can cause scarring or infection.</li>
+            </ul>
+        </div>
+
+        <!-- Body Piercing Aftercare (Initially Hidden) -->
+        <div id="body-piercing-aftercare" class="bg-black bg-opacity-70 p-8 rounded-xl shadow-2xl aftercare-section hidden">
+            <h3 class="text-2xl font-semibold text-white mb-4">Body Piercing Aftercare</h3>
+            <p class="text-gray-300 mb-6">Proper aftercare is critical for healing your body piercings and ensuring long-lasting results.</p>
+            <h4 class="text-xl font-semibold text-white mb-4">Cleaning Instructions for Body Piercings</h4>
+            <ul class="text-gray-300 space-y-4 mb-6">
+                <li><strong>1. Wash hands thoroughly</strong> before cleaning or touching the piercing.</li>
+                <li><strong>2. Saline soak</strong> at least two to three times daily. Invert a cup of warm saline solution over the piercing, or use gauze or a cotton ball soaked in saline to apply to the area. Soak for a few minutes to ensure proper cleaning.</li>
+                <li><strong>3. Soap</strong> only once or twice a day. Use a mild soap while showering, applying a pearl-sized drop to clean the jewelry and the piercing. Rinse thoroughly to remove all soap residue.</li>
+                <li><strong>4. Dry</strong> gently with disposable paper products like gauze or tissues to avoid introducing bacteria from towels.</li>
+            </ul>
+        </div>
+
+        <!-- Mouth Piercing Aftercare (Initially Hidden) -->
+        <div id="mouth-piercing-aftercare" class="bg-black bg-opacity-70 p-8 rounded-xl shadow-2xl aftercare-section hidden">
+            <h4 class="text-xl font-semibold text-white mb-4">Mouth Piercing Aftercare</h4>
+            <ul class="text-gray-300 space-y-4">
+                <li><strong>1. Maintain oral hygiene:</strong> Rinse with saline solution or non-alcoholic mouthwash after meals and at least four to five times a day. Avoid alcohol-based mouthwashes as they can irritate the piercing.</li>
+                <li><strong>2. Avoid touching:</strong> Do not touch or play with the piercing with your tongue to prevent bacteria from entering the wound.</li>
+                <li><strong>3. Soft diet:</strong> Stick to soft foods for the first few days after the piercing. Avoid spicy or acidic foods that could irritate the area.</li>
+                <li><strong>4. Avoid smoking, alcohol, and oral sex:</strong> These activities can introduce bacteria or irritate the piercing, so it’s best to avoid them during the healing process.</li>
+                <li><strong>5. Be cautious with oral hygiene products:</strong> Use only mild, alcohol-free mouthwash or saline solution, avoiding hydrogen peroxide and alcohol-based products.</li>
+                <strong>6. Keep up with dental care:</strong> Brush your teeth carefully around the piercing to maintain good oral hygiene.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Aftercare Downloadable PDF -->
+    <div class="mt-10">
+        <a href="files/AftercareInstructions.pdf" download target="_blank"
+            class="bg-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-600 transition">
+            Download Aftercare Guide
+        </a>
+    </div>
+</section>
+    
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
+                <p>ViciousInks Tattoos &amp; Piercings</p>
+                <p>Email: <a href="mailto:viciousinksofficial@gmail.com" class="text-red-500 hover:underline">viciousinksofficial@gmail.com</a></p>
+                <p>Phone: <a href="tel:+27727387762" class="text-red-500 hover:underline">072 738 7762</a></p>
             </div>
-            <div class="footer-section social-media">
-                <h4>Follow Us</h4>
-                <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
-                <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
-                <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
+
+            <!-- Social Media Links -->
+            <div class="footer-section">
+                <h4 class="text-xl font-semibold mb-4">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/share/16DfWmQuon/?mibextid=wwXIfr" target="_blank" class="hover:text-gray-300">
+                        <img src="images/facebook-icon-white.svg" alt="Facebook" class="w-6 inline">
+                        Facebook
+                    </a>
+                    <a href="https://www.instagram.com/viciousinks_official?igsh=dTFzbHhqbGZ3cjEx&utm_source=qr" target="_blank" class="hover:text-gray-300">
+                        <img src="images/instagram-icon-white.svg" alt="Instagram" class="w-6 inline">
+                        Instagram
+                    </a>
+                    <a href="noTwitterAccount.html" target="_blank" class="hover:text-gray-300">
+                        <img src="images/twitter-icon-white.svg" alt="Twitter" class="w-6 inline">
+                        Twitter
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 ViciousInks Tattoos & Piercings. All Rights Reserved.</p>
+
+        <!-- Footer Bottom -->
+        <div class="text-center mt-6 border-t border-gray-700 pt-4">
+            <p>© 2025 ViciousInks Tattoos &amp; Piercings. All Rights Reserved.</p>
         </div>
     </footer>
-    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
 
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-red-600 p-3 rounded-full text-white hidden">↑</button>
+
+    <!-- JavaScript for Mobile Menu & Back to Top -->
     <script>
-        // Show the button when the user scrolls down 200px from the top
-window.onscroll = function() { toggleBackToTopButton(); };
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+        const backToTop = document.getElementById("backToTop");
 
-function toggleBackToTopButton() {
-    const backToTopButton = document.getElementById("backToTop");
-    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-        backToTopButton.classList.add("show");
-    } else {
-        backToTopButton.classList.remove("show");
-    }
-}
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("hidden");
+        });
 
-// Smooth scroll to the top when the button is clicked
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove("hidden");
+            } else {
+                backToTop.classList.add("hidden");
+            }
+        });
 
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+         // Toggle between Tattoos and Piercings section
+        const tattoosTab = document.getElementById("tattoosTab");
+        const piercingsTab = document.getElementById("piercingsTab");
+        const tattoosSection = document.getElementById("tattoosSection");
+        const piercingsSection = document.getElementById("piercingsSection");
+
+        // Function to show Tattoos section
+        tattoosTab.addEventListener("click", () => {
+            tattoosSection.classList.remove("hidden");
+            piercingsSection.classList.add("hidden");
+            tattoosTab.classList.add("bg-red-700");
+            piercingsTab.classList.remove("bg-red-700");
+        });
+
+        // Function to show Piercings section
+        piercingsTab.addEventListener("click", () => {
+            piercingsSection.classList.remove("hidden");
+            tattoosSection.classList.add("hidden");
+            piercingsTab.classList.add("bg-red-700");
+            tattoosTab.classList.remove("bg-red-700");
+        });
+
+        // Function to show the corresponding section and hide others
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.aftercare-section');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Show the selected section
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.remove('hidden');
+        }
+
+        // Initially show the Tattoo Aftercare section
+        showSection('tattoo-aftercare');
     </script>
 
 </body>
