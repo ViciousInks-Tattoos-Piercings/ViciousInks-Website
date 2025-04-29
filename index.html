@@ -15,24 +15,30 @@
 <body class="bg-gray-900 text-white">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-80 p-4 flex justify-between items-center z-50">
-        <!-- Logo -->
-        <a href="#home" class="flex items-center gap-3">
-            <img src="images/logo-removebg.png" alt="ViciousInks Logo" class="h-20 w-auto">
+<nav class="fixed top-0 left-0 w-full bg-black bg-opacity-80 p-4 flex justify-between items-center z-50">
+    <!-- Logo -->
+    <a href="#home" class="flex items-center gap-3">
+        <img src="images/logo-removebg.png" alt="ViciousInks Logo" class="h-20 w-auto">
+        <div class="flex flex-col items-center ">
             <span class="text-2xl font-bold tracking-wide text-white">ViciousInks</span>
-        </a>
-    
-        <!-- Mobile Menu Toggle -->
-        <button id="menuToggle" class="md:hidden text-2xl text-white">☰</button>
-    
-        <!-- Navigation Links -->
-        <ul id="navLinks" class="hidden md:flex gap-6 text-white">
-            <li><a href="#gallery" class="hover:text-gray-300 transition">Gallery</a></li>
-            <li><a href="#artists" class="hover:text-gray-300 transition">Artist</a></li>
-            <li><a href="#aftercare" class="hover:text-gray-300 transition">Aftercare</a></li>
-            <li><a href="#booking" class="hover:text-gray-300 transition">Book Now</a></li>
-        </ul>
-    </nav>
+            <span class="text-sm text-red-400 italic">Tattoos & Piercings</span>
+        </div>
+        
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="menuToggle" class="md:hidden text-2xl text-white focus:outline-none">☰</button>
+
+    <!-- Navigation Links -->
+    <ul id="navLinks" class="hidden md:flex ml-auto md:ml-80 gap-6 text-white md:items-center md:static absolute top-full left-0 w-full bg-black bg-opacity-90 md:bg-transparent flex-col md:flex-row transition-all duration-300">
+        <li><a href="#gallery" class="block px-4 py-2 md:px-0 hover:text-gray-300 transition">Gallery</a></li>
+        <li><a href="#artists" class="block px-4 py-2 md:px-0 hover:text-gray-300 transition">Artist</a></li>
+        <li><a href="#tips" class="block px-4 py-2 md:px-0 hover:text-gray-300 transition">Tips</a></li>
+        <li><a href="#aftercare" class="block px-4 py-2 md:px-0 hover:text-gray-300 transition">Aftercare</a></li>
+        <li><a href="#booking" class="block px-4 py-2 md:px-0 hover:text-gray-300 transition">Book Now</a></li>
+    </ul>
+</nav>
+
     
 
     <!-- Hero Section -->
@@ -67,18 +73,24 @@
     </h2>
     
     
-    <!-- Collapsible Tabs for Tattoos and Piercings -->
+    <!-- Collapsible Tabs for Tattoos ,Eyebrows and Piercings -->
     <div class="max-w-7xl mx-auto">
         <!-- Tabs Buttons -->
-        <div class="flex justify-center mb-6 space-x-4">
-            <button id="tattoosTab" class="px-8 py-4 text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
+        <div class="flex justify-center mb-6 gap-3 flex-wrap">
+            <button id="tattoosTab"
+                class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
                 Tattoos
             </button>
-            <button id="piercingsTab" class="px-8 py-4 text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
+            <button id="eyebrowsTab"
+                class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
+                Eyebrows
+            </button>
+            <button id="piercingsTab"
+                class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
                 Piercings
             </button>
-            
         </div>
+        
         
 
         <!-- Tattoo Gallery -->
@@ -133,6 +145,14 @@
                 <img src="images/tattoos/sleeves (7).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
                 <img src="images/tattoos/sleeves (8).jpg" alt="Tattoo" class="w-full object-cover rounded-lg">
             </div>
+            <!--eyebrows section-->
+            <div id="eyebrowsSection" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 hidden">
+                <img src="images/tattoos/eyebrows (2).jpg" alt="Eyebrows" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/eyebrows (3).jpg" alt="Eyebrows" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/eyebrows (1).jpg" alt="Eyebrows" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/eyebrows (5).jpg" alt="Eyebrows" class="w-full object-cover rounded-lg">
+                <img src="images/tattoos/eyebrows (4).jpg" alt="Eyebrows" class="w-full object-cover rounded-lg">
+            </div>
         
         <!-- Piercing Gallery -->
         <div id="piercingsSection" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 hidden">
@@ -178,7 +198,7 @@
     
         <div class="max-w-lg mx-auto bg-black bg-opacity-70 rounded-xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-300">
             <img src="images/tattoos/artist.jpg" alt="Freddie - Tattoo & Piercing Artist" 
-                 class="w-48 h-48 object-cover rounded-full mx-auto border-4 border-red-600 transition-transform duration-300 hover:scale-110">
+                 class="w-48 h-48 object-cover rounded-full mx-auto border-4 border-red-700 transition-transform duration-300 hover:scale-110">
             
             <h3 class="text-2xl font-semibold text-white mt-4">Freddie</h3>
             <p class="text-lg text-gray-400">Tattoo & Piercing Artist</p>
@@ -206,17 +226,72 @@
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-        <div class="flex justify-center gap-4">
-        <a href="files/Booking & Payment Policy.pdf" download target="_blank"
-            class="bg-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-600 transition">
-            Download Booking Policy
-        </a>
-        <a href="https://book.settime.io/viciousinks-tattoospiercings" target="_blank"
-            class="bg-red-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-500 transition">
-            Book Now
-        </a>
-    </div>
+        <div class="flex justify-center gap-3 flex-wrap sm:flex-nowrap mb-6 px-4">
+            <!-- Download Booking Policy Button -->
+            <a id="downloadPolicy"
+               href="files/Booking & Payment Policy.pdf"
+               target="_blank"
+               class="whitespace-nowrap text-center bg-gray-700 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white rounded-full hover:bg-gray-600 transition-all duration-300">
+              Download Booking Policy
+            </a>
+          
+            <!-- Book Now Button -->
+            <a id="bookNowBtn"
+               href="#"
+               target="_blank"
+               class="whitespace-nowrap text-center bg-red-600 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white rounded-full hover:bg-red-500 transition-all duration-300">
+              Book Now
+            </a>
+          </div>
+          
     </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="bg-black/50 text-white py-20 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-white">
+                <i class="fas fa-lightbulb h-8 w-8 text-white"></i>
+                Tattoo & Piercing Tips
+            </h2>
+            <p class="text-lg text-gray-300 mb-12">Make the most of your session with these helpful tips before, during, and after your appointment.</p>
+            
+            <div class="grid md:grid-cols-3 gap-10 text-left">
+                <!-- Before Session Tips -->
+                <div id="before-session" class="bg-gray-700 bg-opacity-70 p-8 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-semibold text-red-400 mb-4">Before Your Tattoo or Piercing Session</h3>
+                    <ul class="text-gray-300 space-y-4">
+                        <li><strong>1. Eat well:</strong> Have a full meal beforehand to avoid dizziness or fainting.</li>
+                        <li><strong>2. Stay hydrated:</strong> Drink lots of water the day before and day of your session.</li>
+                        <li><strong>3. Avoid alcohol or caffeine:</strong> They thin your blood and increase bleeding.</li>
+                        <li><strong>4. Wear comfy clothes:</strong> Ensure easy access to the area being worked on.</li>
+                        <li><strong>5. Sleep well:</strong> A good night’s sleep helps your body handle pain better.</li>
+                    </ul>
+                </div>
+    
+                <!-- During Session Tips -->
+                <div id="during-session" class="bg-gray-700 bg-opacity-70 p-8 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-semibold text-red-400 mb-4">During Your Session</h3>
+                    <ul class="text-gray-300 space-y-4">
+                        <li><strong>1. Relax:</strong> Breathe steadily and stay calm — you’re in safe hands.</li>
+                        <li><strong>2. Distract yourself:</strong> Bring a friend, music or something to watch/listen to.</li>
+                        <li><strong>3. Speak up:</strong> Let the artist know if you need a break or feel unwell.</li>
+                        <li><strong>4. Stay still:</strong> Sudden movements can affect the result or cause injury.</li>
+                    </ul>
+                </div>
+    
+                <!-- After Session Tips -->
+                <div id="after-session" class="bg-gray-700 bg-opacity-70 p-8 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-semibold text-red-400 mb-4">After Your Session</h3>
+                    <ul class="text-gray-300 space-y-4">
+                        <li><strong>1. Follow instructions:</strong> Always stick to the aftercare advice given by your artist.</li>
+                        <li><strong>2. Ask if unsure:</strong> Contact artist for any concerns or signs of infection.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
 
    
 <!-- Aftercare Section -->
@@ -230,23 +305,28 @@
     </p>
     
     <!-- Navigation Buttons -->
-    <div class="mb-6">
-        <button onclick="showSection('tattoo-aftercare')" class="mb-5 py-4 text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
+    <div class="overflow-x-auto">
+        <div class="flex justify-center mb-6 gap-3 min-w-max px-4">
+          <button onclick="showSection('tattoo-aftercare')" class="whitespace-nowrap px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
             Tattoo Aftercare
-        </button>
-        <button onclick="showSection('body-piercing-aftercare')" class="mb-5 px-8 py-4 text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
+          </button>
+          <button onclick="showSection('body-piercing-aftercare')" class="whitespace-nowrap px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
             Body Piercing Aftercare
-        </button>
-        <button onclick="showSection('mouth-piercing-aftercare')" class="mb-5 px-8 py-4 text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
+          </button>
+          <button onclick="showSection('mouth-piercing-aftercare')" class="whitespace-nowrap px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white bg-red-600 rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:bg-red-700">
             Mouth Piercing Aftercare
-        </button>
-    </div>
+          </button>
+        </div>
+      </div>
+      
+    
+    
 
     <!-- Aftercare Tips -->
     <div class="max-w-5xl mx-auto">
         <!-- Tattoo Aftercare (Initially Visible) -->
         <div id="tattoo-aftercare" class="bg-black bg-opacity-70 p-8 rounded-xl shadow-2xl aftercare-section">
-            <h3 class="text-2xl font-semibold text-white mb-4">Tattoo Aftercare</h3>
+            <h3 class="text-2xl font-semibold text-red-400 mb-4">Tattoo Aftercare</h3>
             <ul class="text-gray-300 space-y-4">
                 <li><strong>1. Remove bandages</strong> after 6 hours of getting your tattoo.</li>
                 <li><strong>2. Gently wash</strong> the tattoo with mild, unscented soap and lukewarm water.</li>
@@ -259,7 +339,7 @@
 
         <!-- Body Piercing Aftercare (Initially Hidden) -->
         <div id="body-piercing-aftercare" class="bg-black bg-opacity-70 p-8 rounded-xl shadow-2xl aftercare-section hidden">
-            <h3 class="text-2xl font-semibold text-white mb-4">Body Piercing Aftercare</h3>
+            <h3 class="text-2xl font-semibold text-red-400 mb-4">Body Piercing Aftercare</h3>
             <p class="text-gray-300 mb-6">Proper aftercare is critical for healing your body piercings and ensuring long-lasting results.</p>
             <h4 class="text-xl font-semibold text-white mb-4">Cleaning Instructions for Body Piercings</h4>
             <ul class="text-gray-300 space-y-4 mb-6">
@@ -272,7 +352,7 @@
 
         <!-- Mouth Piercing Aftercare (Initially Hidden) -->
         <div id="mouth-piercing-aftercare" class="bg-black bg-opacity-70 p-8 rounded-xl shadow-2xl aftercare-section hidden">
-            <h4 class="text-xl font-semibold text-white mb-4">Mouth Piercing Aftercare</h4>
+            <h4 class="text-xl font-semibold text-red-400 mb-4">Mouth Piercing Aftercare</h4>
             <ul class="text-gray-300 space-y-4">
                 <li><strong>1. Maintain oral hygiene:</strong> Rinse with saline solution or non-alcoholic mouthwash after meals and at least four to five times a day. Avoid alcohol-based mouthwashes as they can irritate the piercing.</li>
                 <li><strong>2. Avoid touching:</strong> Do not touch or play with the piercing with your tongue to prevent bacteria from entering the wound.</li>
@@ -339,10 +419,17 @@
     <script>
         const menuToggle = document.getElementById("menuToggle");
         const navLinks = document.getElementById("navLinks");
-        const backToTop = document.getElementById("backToTop");
 
         menuToggle.addEventListener("click", () => {
             navLinks.classList.toggle("hidden");
+        });
+        // Close menu when a nav link is clicked (mobile)
+        document.querySelectorAll('#navLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    navLinks.classList.add('hidden');
+                }
+            });
         });
 
         window.addEventListener("scroll", () => {
@@ -357,17 +444,31 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
-         // Toggle between Tattoos and Piercings section
+         // Toggle between Tattoos ,Eyebrows and Piercings section
         const tattoosTab = document.getElementById("tattoosTab");
+        const eyebrowsTab = document.getElementById("eyebrowsTab");
         const piercingsTab = document.getElementById("piercingsTab");
         const tattoosSection = document.getElementById("tattoosSection");
+        const eyebrowsSection = document.getElementById("eyebrowsSection");
         const piercingsSection = document.getElementById("piercingsSection");
 
         // Function to show Tattoos section
         tattoosTab.addEventListener("click", () => {
             tattoosSection.classList.remove("hidden");
             piercingsSection.classList.add("hidden");
-            tattoosTab.classList.add("bg-red-700");
+            eyebrowsSection.classList.add("hidden");
+            tattoosTab.classList.add("bg-red-800");
+            eyebrowsTab.classList.remove("bg-red-700");
+            piercingsTab.classList.remove("bg-red-700");
+        });
+
+        // Function to show eyebrows section
+        eyebrowsTab.addEventListener("click", () => {
+            eyebrowsSection.classList.remove("hidden");
+            tattoosSection.classList.add("hidden");
+            piercingsSection.classList.add("hidden");
+            eyebrowsTab.classList.add("bg-red-700");
+            tattoosTab.classList.remove("bg-red-700");
             piercingsTab.classList.remove("bg-red-700");
         });
 
@@ -375,8 +476,10 @@
         piercingsTab.addEventListener("click", () => {
             piercingsSection.classList.remove("hidden");
             tattoosSection.classList.add("hidden");
+            eyebrowsSection.classList.add("hidden");
             piercingsTab.classList.add("bg-red-700");
             tattoosTab.classList.remove("bg-red-700");
+            eyebrowsTab.classList.remove("bg-red-700");
         });
 
         // Function to show the corresponding section and hide others
@@ -394,6 +497,23 @@
 
         // Initially show the Tattoo Aftercare section
         showSection('tattoo-aftercare');
+
+        // Make sure the policy has been downloaded before booking
+        let policyDownloaded = false;
+
+        document.getElementById('downloadPolicy').addEventListener('click', () => {
+            policyDownloaded = true;
+        });
+
+        document.getElementById('bookNowBtn').addEventListener('click', (e) => {
+            if (!policyDownloaded) {
+                e.preventDefault();
+                alert('Please check the Booking Policy before proceeding with the booking.');
+            } else {
+                // If policy is downloaded, redirect to booking site
+                window.location.href = 'https://book.settime.io/viciousinks-tattoospiercings';
+            }
+        });
     </script>
 
 </body>
