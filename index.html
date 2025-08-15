@@ -241,50 +241,14 @@
             </iframe>
         </div>
         <div class="flex justify-center gap-3 flex-wrap sm:flex-nowrap mb-6 px-4">
-            <!-- View Booking Policy Button -->
-            <button id="downloadPolicy" onclick="openModal()" class="whitespace-nowrap text-center bg-gray-700 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white rounded-full hover:bg-gray-600 transition-all duration-300">
-                View Booking Policy
-            </button>
-            <!--Download Booking Policy
-            <a id="downloadPolicy"
-               href="files/Booking & Payment Policy.pdf"
-               target="_blank"
-               class="whitespace-nowrap text-center bg-gray-700 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white rounded-full hover:bg-gray-600 transition-all duration-300">
-               Download Booking Policy
-            </a>-->
-            
-          
             <!-- Book Now Button -->
-            <a id="bookNowBtn"
-               href="#"
-               target="_blank"
+            <a href="booking_policy.html"
                class="whitespace-nowrap text-center bg-red-600 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold text-white rounded-full hover:bg-red-500 transition-all duration-300">
               Book Now
             </a>
           </div>
           
     </section>
-    <!-- Modal Overlay -->
-<div id="modal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden justify-center items-center">
-  <div class="bg-gray-900 rounded-lg shadow-xl w-full max-w-4xl p-4 relative">
-    
-    <!-- Close Button -->
-    <button onclick="closeModal()" class="absolute top-2 right-2 text-white text-2xl hover:text-red-500">
-      &times;
-    </button>
-
-    <!-- Modal Content -->
-    <h2 class="text-xl font-bold text-white mb-4">Booking & Payment Policy</h2>
-    
-    <!-- PDF Viewer -->
-    <iframe 
-      src="files/Booking%20&%20Payment%20Policy.pdf" 
-      class="w-full h-[500px] rounded"
-      frameborder="0">
-    </iframe>
-
-  </div>
-</div>
 
     <!-- Tips Section -->
     <section id="tips" class="bg-black/50 text-white py-20 px-6">
@@ -429,7 +393,7 @@
             <div class="footer-section">
                 <h4 class="text-xl font-semibold mb-4">Follow Us</h4>
                 <div class="flex space-x-4">
-                    <a href="https://www.facebook.com/share/16DfWmQuon/?mibextid=wwXIfr" target="_blank" class="hover:text-gray-300">
+                    <a href="https://www.facebook.com/people/ViciousInks-Official/61578806826064/" target="_blank" class="hover:text-gray-300">
                         <img src="images/facebook-icon-white.svg" alt="Facebook" class="w-6 inline">
                         Facebook
                     </a>
@@ -437,7 +401,7 @@
                         <img src="images/instagram-icon-white.svg" alt="Instagram" class="w-6 inline">
                         Instagram
                     </a>
-                    <a href="" target="_blank" class="hover:text-gray-300">
+                    <a href="https://www.tiktok.com/@viciousinks_official" target="_blank" class="hover:text-gray-300">
                         <img src="images/tiktok-logo-thin-svgrepo-com.svg" alt="Tiktok" class="w-6 inline">
                         Tiktok
                     </a>
@@ -542,32 +506,8 @@
         // Initially show the Tattoo Aftercare section
         showSection('tattoo-aftercare');
 
-        // Make sure the policy has been downloaded before booking
-        let policyDownloaded = false;
-
-        document.getElementById('downloadPolicy').addEventListener('click', () => {
-            policyDownloaded = true;
-        });
-
-        document.getElementById('bookNowBtn').addEventListener('click', (e) => {
-            if (!policyDownloaded) {
-                e.preventDefault();
-                alert('Please check the Booking Policy before proceeding with the booking.');
-            } else {
-                // If policy is downloaded, redirect to booking site
-                window.location.href = 'booking.html';
-            }
-        });
-
-        function openModal() {
-    document.getElementById("modal").classList.remove("hidden");
-    document.getElementById("modal").classList.add("flex");
-  }
-
-  function closeModal() {
-    document.getElementById("modal").classList.remove("flex");
-    document.getElementById("modal").classList.add("hidden");
-  }
+        
+  
     </script>
 
 </body>
